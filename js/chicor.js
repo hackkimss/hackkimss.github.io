@@ -39,4 +39,4 @@ var params = {
         .fail(function(xhr, status, errorThrown) {
             console.log('fail');
         });
-    });
+
