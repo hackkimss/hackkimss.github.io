@@ -1,3 +1,4 @@
+11
 var params = {
             odrSbagNos: _SBAG_NOS.split(','), // �λ컮援щ땲踰덊샇��
             useCupIssuNos: useCupIssuNos, // �ъ슜荑좏룿紐⑸줉
