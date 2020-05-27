@@ -1,30 +1,28 @@
-11
 var params = {
-            odrSbagNos: _SBAG_NOS.split(','), // �λ컮援щ땲踰덊샇��
+            odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
             useCupIssuNos: useCupIssuNos, // �ъ슜荑좏룿紐⑸줉
-            sbagPrens: sbagPrens, // �쇳븨諛깆궗���덉젙蹂�
-            goosPrens: goosPrens, // �곹뭹�ъ��덉젙蹂�
-            fulnm: $('#fulnm').val(), // 二쇰Ц�먮챸
-            moblNo: $('#moblNo').val(), // 紐⑤컮�쇰쾲��
-            eml: $('#eml').val(), // �대찓��
-            dlvtoNo: (_DLVTO_NO) ? _DLVTO_NO : '', // 諛곗넚吏�踰덊샇
-            rcvrFulnm: $('#rcvrFulnm').val(), // �섏떊�먮챸
-            zipNo: $('#zipNo').val(), // �고렪踰덊샇
-            zipAddr: $('#zipAddr').val(), // �고렪二쇱냼
-            dtlAddr: $('#dtlAddr').val(), // �곸꽭二쇱냼
-            rcvrMoblNo: $('#rcvrMoblNo').val(), // �섎졊�먰빖�쒗룿
-            dlvrMemo: dlvrMemo, // 諛곗넚硫붾え
+            sbagPrens: [], // �쇳븨諛깆궗���덉젙蹂�
+            goosPrens: [], // �곹뭹�ъ��덉젙蹂�
+            fulnm: "abc", // 二쇰Ц�먮챸
+            moblNo: "01012341234", // 紐⑤컮�쇰쾲��
+            eml: "dummy@dummy.dummy", // �대찓��
+            dlvtoNo:1429, // 諛곗넚吏�踰덊샇
+            rcvrFulnm: "dummy", // �섏떊�먮챸
+            zipNo: "dummy", // �고렪踰덊샇
+            zipAddr: "dummy", // �고렪二쇱냼
+            dtlAddr: "dummy", // �곸꽭二쇱냼
+            rcvrMoblNo: "dummy", // �섎졊�먰빖�쒗룿
+            dlvrMemo: "dummy", // 諛곗넚硫붾え
             nextSettWayCdYn: '', // �ㅼ쓬寃곗젣�섎떒�щ�
-            settWayCd: $('.select-payment').find('input:radio:checked').val(), // 寃곗젣�섎떒肄붾뱶
-            stfSaleYn: $('#stfSaleYn').val(), // �꾩쭅�먰븷�몄뿬遺�
-            ssgPoinAmt: (typeof(_SSG_POIN_AMT) === 'undefined') ? 0 : _SSG_POIN_AMT, // �ъ슜�좎꽭怨꾪룷�명듃
-            ssgPoinPwd: ssgPoinPwd, // �좎꽭怨꾪룷�명듃鍮꾨�踰덊샇
-            poinAmt: (typeof(_CHICOR_POIN_AMT) === 'undefined') ? 0 : _CHICOR_POIN_AMT, // �ъ슜�쒖퐫瑜댄룷�명듃
-            odrTotamt: Number($("#odrTotamt").val()), // 寃곗젣湲덉븸
-            rlxNoUseYn: ($('#rlxNoUseYn').prop('checked') ? 'Y' : 'N') // �덉떖踰덊샇�ъ슜�щ�
+            settWayCd: "PCRDT"
+            stfSaleYn: 0
+            ssgPoinAmt: 0
+            ssgPoinPwd: ""
+            poinAmt: 0
+            odrTotamt: 0
+            rlxNoUseYn: 'N'
         }
 
-        loadingToggle();
 
         $.ajax({
             url: '/order/ready',
