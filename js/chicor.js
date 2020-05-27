@@ -1,3 +1,4 @@
+alert('sec');
 var params = {
             odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
             useCupIssuNos: useCupIssuNos, // �ъ슜荑좏룿紐⑸줉
