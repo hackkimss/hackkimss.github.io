@@ -15,7 +15,7 @@ var params = {
             rcvrMoblNo: "dummy", // �섎졊�먰빖�쒗룿
             dlvrMemo: "dummy", // 諛곗넚硫붾え
             nextSettWayCdYn: '', // �ㅼ쓬寃곗젣�섎떒�щ�
-            settWayCd: "PCRDT"
+            settWayCd: "PCRDT",
             stfSaleYn: 0,
             ssgPoinAmt: 0,
             ssgPoinPwd: "",
