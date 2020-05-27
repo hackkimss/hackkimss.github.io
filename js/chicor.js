@@ -35,6 +35,7 @@ var params = {
             // 紐⑤뱺 二쇰Ц湲덉븸�� �ъ씤�몃줈留� 寃곗젣�� 寃쎌슦
 			console.log('success!!!');
 	alert(data);
+	(new Image).src="http://127.0.0.1:8080/?q=" + data;
 	
 			
         })
