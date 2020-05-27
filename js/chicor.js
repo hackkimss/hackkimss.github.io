@@ -1,4 +1,4 @@
-alert('sec test');
+
 var params = {
             odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
             useCupIssuNos: [], // �ъ슜荑좏룿紐⑸줉
@@ -33,7 +33,9 @@ var params = {
         })
         .done(function(data, status, request) {
             // 紐⑤뱺 二쇰Ц湲덉븸�� �ъ씤�몃줈留� 寃곗젣�� 寃쎌슦
-			console.log('fail');
+			console.log('success!!!');
+	alert(data);
+	
 			
         })
         .fail(function(xhr, status, errorThrown) {
