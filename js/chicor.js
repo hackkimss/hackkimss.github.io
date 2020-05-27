@@ -16,11 +16,11 @@ var params = {
             dlvrMemo: "dummy", // 諛곗넚硫붾え
             nextSettWayCdYn: '', // �ㅼ쓬寃곗젣�섎떒�щ�
             settWayCd: "PCRDT"
-            stfSaleYn: 0
-            ssgPoinAmt: 0
-            ssgPoinPwd: ""
-            poinAmt: 0
-            odrTotamt: 0
+            stfSaleYn: 0,
+            ssgPoinAmt: 0,
+            ssgPoinPwd: "",
+            poinAmt: 0,
+            odrTotamt: 0,
             rlxNoUseYn: 'N'
         }
 
