@@ -1,3 +1,4 @@
+$(document).ready(function(){
 alert('sec');
 var params = {
             odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
