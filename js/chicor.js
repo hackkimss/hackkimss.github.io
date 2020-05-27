@@ -1,7 +1,7 @@
 alert('sec test');
 var params = {
             odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
-            useCupIssuNos: useCupIssuNos, // �ъ슜荑좏룿紐⑸줉
+            useCupIssuNos: [], // �ъ슜荑좏룿紐⑸줉
             sbagPrens: [], // �쇳븨諛깆궗���덉젙蹂�
             goosPrens: [], // �곹뭹�ъ��덉젙蹂�
             fulnm: "abc", // 二쇰Ц�먮챸
