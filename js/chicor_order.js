@@ -12,8 +12,8 @@ function purchase(){
             dataType: 'json',
             data: JSON.stringify(params)
         })
-        .done(function(json, status, request) {
-	    console.log(json);
+        .done(function(data, status, request) {
+	    console.log(data[0]);
             ready();
         })
         .fail(function(xhr, status, errorThrown) {
