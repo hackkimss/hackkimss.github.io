@@ -13,6 +13,7 @@ function purchase(){
             data: JSON.stringify(params)
         })
         .done(function(json, status, request) {
+	    console.log(json);
             ready();
         })
         .fail(function(xhr, status, errorThrown) {
@@ -29,7 +30,7 @@ var params = {
             sbagPrens: "", // �쇳븨諛깆궗���덉젙蹂�
             goosPrens: [], // �곹뭹�ъ��덉젙蹂�
             fulnm: "abc", // 二쇰Ц�먮챸
-            moblNo: "01012341234", // 紐⑤컮�쇰쾲��
+            moblNo: "01091144403", // 紐⑤컮�쇰쾲��
             eml: "dummy@dummy.dummy", // �대찓��
             dlvtoNo:1429, // 諛곗넚吏�踰덊샇
             rcvrFulnm: "dummy", // �섏떊�먮챸
