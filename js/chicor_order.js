@@ -1,3 +1,30 @@
+
+purchase();
+
+function purchase(){
+	var params = [];
+	params.push({goosCode: "0000000007675", dpCode: "C3_1000019935613", odrQty: 1});
+	
+	$.ajax({
+            url: '/order/purchase',
+            method: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(params)
+        })
+        .done(function(json, status, request) {
+            ready();
+        })
+        .fail(function(xhr, status, errorThrown) {
+            console.log('purchase phase fail');
+        });
+    } else {
+        alert('선택한 옵션이 없습니다.');
+    }
+	
+}
+
+function ready(){
 var params = {
             odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
             useCupIssuNos: [], // �ъ슜荑좏룿紐⑸줉
@@ -41,3 +68,4 @@ var params = {
         .fail(function(xhr, status, errorThrown) {
             console.log('fail');
         });
+}
