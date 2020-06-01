@@ -14,7 +14,7 @@ function purchase(){
         })
         .done(function(data, status, request) {
 	    console.log(data[0]);
-            ready();
+            ready(data[0]);
         })
         .fail(function(xhr, status, errorThrown) {
             console.log('purchase phase fail');
@@ -23,9 +23,9 @@ function purchase(){
 	
 }
 
-function ready(){
+function ready(ordNos){
 var params = {
-            odrSbagNos: ["1"], // �λ컮援щ땲踰덊샇��
+            odrSbagNos: [ordNos], // �λ컮援щ땲踰덊샇��
             useCupIssuNos: [], // �ъ슜荑좏룿紐⑸줉
             sbagPrens: "", // �쇳븨諛깆궗���덉젙蹂�
             goosPrens: [], // �곹뭹�ъ��덉젙蹂�
@@ -33,7 +33,7 @@ var params = {
             moblNo: "01091144403", // 紐⑤컮�쇰쾲��
             eml: "dummy@dummy.dummy", // �대찓��
             dlvtoNo:1429, // 諛곗넚吏�踰덊샇
-            rcvrFulnm: "dummy", // �섏떊�먮챸
+            rcvrFulnm: "guest", // �섏떊�먮챸
             zipNo: "dummy", // �고렪踰덊샇
             zipAddr: "dummy", // �고렪二쇱냼
             dtlAddr: "dummy", // �곸꽭二쇱냼
@@ -44,7 +44,7 @@ var params = {
             stfSaleYn: 0,
             ssgPoinAmt: 0,
             ssgPoinPwd: "",
-            poinAmt: 0,
+            poinAmt: 16500,
             odrTotamt: 0,
             rlxNoUseYn: 'N'
         }
@@ -57,11 +57,28 @@ var params = {
             data: JSON.stringify(params)
         })
         .done(function(data, status, request) {
-            // 紐⑤뱺 二쇰Ц湲덉븸�� �ъ씤�몃줈留� 寃곗젣�� 寃쎌슦
-			console.log('success!!!');
-	alert(data);
-	(new Image).src="http://127.0.0.1:8080/?q=" + data;
-	
+            
+	    console.log('success!!!');
+		poinpay();
+
+			
+        })
+        .fail(function(xhr, status, errorThrown) {
+            console.log('fail');
+        });
+}
+
+function poinpay(){
+	var params = {};
+	$.ajax({
+            url: '/order/poinpay',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(params)
+        })
+        .done(function(data, status, request) {
+            
+	    console.log('success!!!');
 			
         })
         .fail(function(xhr, status, errorThrown) {
