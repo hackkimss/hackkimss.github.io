@@ -18,9 +18,7 @@ function purchase(){
         .fail(function(xhr, status, errorThrown) {
             console.log('purchase phase fail');
         });
-    } else {
-        alert('선택한 옵션이 없습니다.');
-    }
+
 	
 }
 
