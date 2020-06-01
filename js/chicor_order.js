@@ -29,13 +29,13 @@ var params = {
             useCupIssuNos: [], // �ъ슜荑좏룿紐⑸줉
             sbagPrens: "", // �쇳븨諛깆궗���덉젙蹂�
             goosPrens: [], // �곹뭹�ъ��덉젙蹂�
-            fulnm: "abc", // 二쇰Ц�먮챸
+            fulnm: "아무개", // 二쇰Ц�먮챸
             moblNo: "01091144403", // 紐⑤컮�쇰쾲��
             eml: "dummy@dummy.dummy", // �대찓��
             dlvtoNo:1429, // 諛곗넚吏�踰덊샇
             rcvrFulnm: "guest", // �섏떊�먮챸
             zipNo: "dummy", // �고렪踰덊샇
-            zipAddr: "dummy", // �고렪二쇱냼
+            zipAddr: "서울시 중랑구 면목 1동 123-12", // �고렪二쇱냼
             dtlAddr: "dummy", // �곸꽭二쇱냼
             rcvrMoblNo: "dummy", // �섎졊�먰빖�쒗룿
             dlvrMemo: "dummy", // 諛곗넚硫붾え
