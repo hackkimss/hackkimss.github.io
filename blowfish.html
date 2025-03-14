@@ -23,9 +23,9 @@
             const outputType = parseInt(document.getElementById("outputType").value, 10);
             
             try {
-                const bytes = CryptoJS.Blowfish.decrypt(cipherText, key, {
-                    mode: CryptoJS.mode.ECB, // 예제에서는 ECB 사용 (cipherMode 적용 필요)
-                    padding: CryptoJS.pad.Pkcs7
+                const bytes = Blowfish.decrypt(cipherText, key, {
+                    cipherMode: 1, // 예제에서는 ECB 사용 (cipherMode 적용 필요)
+                    outputType: 0
                 });
                 
                 let decryptedText;
