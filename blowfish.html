@@ -1,3 +1,46 @@
-<html>
-<script src="./js/blowfish.js"></script>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blowfish 복호화</title>
+    <script src="./js/blowfish.js"></script>
+</head>
+<body>
+    <h2>Blowfish 복호화</h2>
+    <label>Key: <input type="text" id="key"></label><br>
+    <label>CipherText: <input type="text" id="cipher"></label><br>
+    <label>CipherMode: <input type="number" id="cipherMode"></label><br>
+    <label>OutputType: <input type="number" id="outputType"></label><br>
+    <button onclick="decrypt()">복호화</button>
+    <p>결과: <span id="result"></span></p>
+
+    <script>
+        function decrypt() {
+            const key = document.getElementById("key").value;
+            const cipherText = document.getElementById("cipher").value;
+            const cipherMode = parseInt(document.getElementById("cipherMode").value, 10);
+            const outputType = parseInt(document.getElementById("outputType").value, 10);
+            
+            try {
+                const bytes = CryptoJS.Blowfish.decrypt(cipherText, key, {
+                    mode: CryptoJS.mode.ECB, // 예제에서는 ECB 사용 (cipherMode 적용 필요)
+                    padding: CryptoJS.pad.Pkcs7
+                });
+                
+                let decryptedText;
+                if (outputType === 1) {
+                    decryptedText = bytes.toString(CryptoJS.enc.Utf8);
+                } else {
+                    decryptedText = bytes.toString();
+                }
+                
+                document.getElementById("result").innerText = decryptedText;
+            } catch (error) {
+                document.getElementById("result").innerText = "복호화 실패";
+            }
+        }
+    </script>
+</body>
 </html>
+
