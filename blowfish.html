@@ -23,7 +23,7 @@
             const outputType = parseInt(document.getElementById("outputType").value, 10);
             
             try {
-                const bytes = Blowfish.decrypt(cipherText, key, {
+                const bytes = blowfish.decrypt(cipherText, key, {
                     cipherMode: 1, // 예제에서는 ECB 사용 (cipherMode 적용 필요)
                     outputType: 0
                 });
